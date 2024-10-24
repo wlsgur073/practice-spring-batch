@@ -1,7 +1,7 @@
 CREATE TABLE `member`
 (
     `member_id`   varchar(20) NOT NULL COMMENT '사용자 ID',
-    `member_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '사용자 이름',
+    `member_name` varchar(50) NOT NULL COMMENT '사용자 이름',
     `status`      varchar(10) NOT NULL COMMENT '상태',
     `phone`       varchar(50)          DEFAULT NULL COMMENT '연락처',
     `meta`        JSON                 DEFAULT NULL COMMENT '메타 정보, JSON',
@@ -13,7 +13,7 @@ CREATE TABLE `member`
 CREATE TABLE `package`
 (
     `package_seq`  int         NOT NULL AUTO_INCREMENT COMMENT '패키지 순번',
-    `package_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '패키지 이름',
+    `package_name` varchar(50) NOT NULL COMMENT '패키지 이름',
     `count`        int                  DEFAULT NULL COMMENT '이용권 수, NULL인 경우 무제한',
     `period`       int                  DEFAULT NULL COMMENT '기간(일), NULL인 경우 무제한',
     `created_at`   timestamp   NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '생성 일시',

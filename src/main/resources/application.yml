@@ -1,6 +1,38 @@
+logging:
+  level:
+    com.example.batch: debug
+    org.springframework.web.servlet: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+
+spring:
+  application.name: practice-spring-batch
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/local_batch
+    username: local_user
+    password: local123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    open-in-view: false
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        default_batch_fetch_size: 100
+  batch:
+    jdbc:
+      initialize-schema:
+  sql.init.mode: always
+
+---
+
 spring:
   datasource:
-    url: jdbc:h2:mem:mydb
+    url: jdbc:h2:mem:testdb;
+    driver-class-name: org.h2.Driver
     username: sa
     password:
-    driver-class-name: org.h2.Driver
+    hikari:
+      maximum-pool-size: 10
