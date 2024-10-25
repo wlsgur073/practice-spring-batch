@@ -23,12 +23,15 @@ spring:
         default_batch_fetch_size: 100
   batch:
     jdbc:
-      initialize-schema:
+      initialize-schema: always
   sql.init.mode: always
 
 ---
 
 spring:
+  config:
+    activate:
+      on-profile: test
   datasource:
     url: jdbc:h2:mem:testdb;
     driver-class-name: org.h2.Driver
