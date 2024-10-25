@@ -14,12 +14,12 @@ public class PackageEntity extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "package_seq")
-    private Integer id;
+    private Long id;
 
     @Setter @Column(name = "package_name", nullable = false, length = 50)
     private String packageName;
 
-    @Column(name = "count")
+    @Setter @Column(name = "count")
     private Integer count;
 
     @Setter @Column(name = "period")
@@ -32,8 +32,8 @@ public class PackageEntity extends BaseEntity {
     public String toString() {
         return getClass().getSimpleName() + "(" +
                 "id = " + id + ", " +
-                "createdAt = " + createdAt + ", " +
-                "modifiedAt = " + modifiedAt + ", " +
+                "createdAt = " + getCreatedAt() + ", " +
+                "modifiedAt = " + getModifiedAt() + ", " +
                 "packageName = " + packageName + ", " +
                 "count = " + count + ", " +
                 "period = " + period + ")";

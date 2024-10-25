@@ -17,7 +17,7 @@ public class PassEntity extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "pass_seq")
-    private Integer id;
+    private Long id;
 
     @ToString.Exclude
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
