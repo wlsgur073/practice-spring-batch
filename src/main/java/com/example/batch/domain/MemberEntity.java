@@ -39,8 +39,8 @@ public class MemberEntity extends BaseEntity {
     public String toString() {
         return getClass().getSimpleName() + "(" +
                 "memberId = " + getMemberId() + ", " +
-                "createdAt = " + createdAt + ", " +
-                "modifiedAt = " + modifiedAt + ", " +
+                "createdAt = " + getCreatedAt() + ", " +
+                "modifiedAt = " + getModifiedAt() + ", " +
                 "memberName = " + getMemberName() + ", " +
                 "status = " + getStatus() + ", " +
                 "phone = " + getPhone() + ", " +
