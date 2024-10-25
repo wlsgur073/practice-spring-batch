@@ -1,4 +1,4 @@
-# Project Title
+# practice-spring-batch
 
 This project is a Spring Boot application designed to demonstrate the use of Spring Batch and Spring Data JPA. It is configured with a Java 17 toolchain and uses MySQL as the primary database with H2 for testing purposes.
 
